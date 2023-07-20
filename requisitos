@@ -1,0 +1,27 @@
+						Aplicación imágenes vectoriales.
+
+Lienzo: tamaño, 1Millx1Mill.	Array en la que metemos figuras???
+
+Las figuras tienen coordenadas sobre el lienzo, x y. Y color.
+
+Tipos de figura: puntos, cuadrados, círculos y lineas.
+
+
+Poder añadir y quitar figuras del lienzo.	.add y .remove
+
+Se pueden modificar las propiedades de las figuras, cada un tiene distintas propiedades que se pueden cambiar (eso va dentro de cada clase de figura)	.indexOf y .set
+
+Punto: coordenada --- SI se crea fuera, ERROR
+Circulo: radio ---- cambiar radio ---- el centro tiene q estar dentro, si no, ERROR
+Cuadrado: centro, lado --- se puede ---- el centro tiene q estar dentro, si no, ERROR
+Linea: p1, p2 --- cambiar los puntos a mas o menos --- UNO de los puntos tiene q estar dentro si no, ERROR
+
+SE deben usar ficheros cuando guardes el dibujo final SOLO.
+
+HERENCIA.
+
+Testing unitario
+
+			ALGO COMPLETADO: HECHO, COMITEADO, TESTING
+
+EXTRA: PRIORIDAD CREAR y MOVER CÍRCULOS
