@@ -2,33 +2,33 @@ package ejerc005;
 
 import java.awt.Color;
 
-public class Circulo extends Figura{
-	
+public class Circulo extends Figura {
+
 	private double radio;
 
-public Figura crearCirculo(int posX, int posY, Color color, double radio) {
-		
+	public Figura crearCirculo(int id, int posX, int posY, Color color, double radio) {
+
 		Figura circulo = null;
-		
-		if(posX >1000000|| posY>1000000) {
+
+		if (posX > 1000000 || posY > 1000000) {
 			throw new InvalidPositionException();
-		}else {
-			circulo = new Circulo(posX, posY, color, radio);
+		} else {
+			circulo = new Circulo(id, posX, posY, color, radio);
 		}
 		return circulo;
 	}
-	
-	//Constructores
+
+	// Constructores
 	public Circulo() {
-		
+
 	}
 
-	public Circulo(int posX, int posY, Color color, Double radio) {
-		super(posX, posY, color);
-		this.radio = radio;		
+	public Circulo(int id, int posX, int posY, Color color, Double radio) {
+		super(id, posX, posY, color);
+		this.radio = radio;
 	}
-	
-	//Getters y Setters
+
+	// Getters y Setters
 	public double getRadio() {
 		return radio;
 	}

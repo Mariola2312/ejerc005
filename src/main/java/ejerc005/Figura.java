@@ -5,6 +5,7 @@ import java.util.Objects;
 
 public abstract class Figura {
 	
+	private int id;
 	private int posX, posY;
 	private Color color;
 	
@@ -14,7 +15,8 @@ public abstract class Figura {
 		
 	}
 	
-	public Figura(int posX, int posY, Color color) {
+	public Figura(int id, int posX, int posY, Color color) {
+		this.id = id;
 		this.posX = posX;
 		this.posY = posY;
 		this.color = color;
@@ -46,11 +48,19 @@ public abstract class Figura {
 		this.color = color;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	
 	//Equal y Hascode
 	@Override
 	public int hashCode() {
-		return Objects.hash(color, posX, posY);
+		return Objects.hash(color, id, posX, posY);
 	}
 
 	@Override
@@ -62,6 +72,6 @@ public abstract class Figura {
 		if (getClass() != obj.getClass())
 			return false;
 		Figura other = (Figura) obj;
-		return Objects.equals(color, other.color) && posX == other.posX && posY == other.posY;
+		return Objects.equals(color, other.color) && id == other.id && posX == other.posX && posY == other.posY;
 	}	
 }
